@@ -10,7 +10,7 @@ git pull
 git checkout -b feature-name
 ```
 
-## 2. Commit changes
+### 2. Commit changes
 
 ```
 git add .
@@ -18,7 +18,7 @@ git commit -m "your-comment-here"
 git push
 ```
 
-## 3. Deployment to prod
+### 3. Deployment to prod
 
 ```
 git checkout main
