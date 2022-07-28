@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
 import Nav from "../components/nav";
+import About from "../components/about";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
 
         <ConnectButton />
       </main>
+      <About />
     </nav>
   );
 }
