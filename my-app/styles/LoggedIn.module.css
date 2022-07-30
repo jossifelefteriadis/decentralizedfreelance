@@ -1,0 +1,32 @@
+.loggedInMain {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #1b202b;
+}
+
+.loggedInAccount {
+  padding: 0 2rem;
+  text-align: center;
+  width: 25rem;
+  height: 26rem;
+  border: 0.5px solid #9b9b9b;
+  border-radius: 7px;
+}
+
+.loggedInAccount h2 {
+  color: #0070f3;
+}
+
+.loggedInAccount__type {
+  font-size: 80%;
+  margin-top: -10px;
+  text-align: center;
+  color: #e78db3;
+}
+
+.loggedInAccount section {
+  text-align: left;
+}

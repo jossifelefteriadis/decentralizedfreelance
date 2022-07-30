@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 import Nav from "../components/nav";
 import About from "../components/about";
+import LoggedIn from "../components/loggedIn";
 
 export default function Home() {
   const { isConnected } = useAccount();
@@ -17,7 +18,7 @@ export default function Home() {
     useEffect(() => logIn(false));
   }
   return (
-    <nav className={styles.container}>
+    <section className={styles.container}>
       <Head>
         <title>Decentralized Freelance</title>
         <meta
@@ -28,7 +29,7 @@ export default function Home() {
       </Head>
 
       <Nav />
-      {isLoggedIn && (
+      {isLoggedIn ? (
         <main className={styles.main}>
           <h1 className={styles.title} style={{ marginBottom: "4rem" }}>
             Welcome to <span>decentralized freelance</span>
@@ -36,8 +37,10 @@ export default function Home() {
 
           <ConnectButton />
         </main>
+      ) : (
+        <LoggedIn />
       )}
       <About />
-    </nav>
+    </section>
   );
 }
