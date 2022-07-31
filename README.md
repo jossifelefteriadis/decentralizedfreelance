@@ -21,8 +21,9 @@ git push
 ### 3. Deployment to prod
 
 ```
-git checkout main
-git pull
-git checkout feature-name
-git merge main
+Go to github repository
+Open new PR on branch against main
+Review changes
+Squash & Merge
+Delete branch
 ```
