@@ -1,4 +1,5 @@
 import styles from "../styles/Nav.module.css";
+import Link from "next/link";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
 import { useEffect, useState } from "react";
@@ -17,7 +18,9 @@ export default function Nav() {
       <h1 className={styles.title}>df</h1>
       {isLoggedIn && (
         <ul className={styles.navItems}>
-          <li>Create profile</li>
+          <Link href="/createProfile">
+            <li>Create profile</li>
+          </Link>
           <li>
             <ConnectButton />
           </li>
