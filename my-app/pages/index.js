@@ -5,6 +5,7 @@ import { useAccount } from "wagmi";
 import { useEffect, useState } from "react";
 
 import Nav from "../components/nav";
+import Footer from "../components/footer";
 import About from "../components/about";
 import LoggedIn from "../components/loggedIn";
 
@@ -41,6 +42,7 @@ export default function Home() {
         <LoggedIn />
       )}
       <About />
+      <Footer />
     </section>
   );
 }
