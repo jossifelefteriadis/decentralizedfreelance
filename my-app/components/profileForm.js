@@ -1,4 +1,5 @@
 import styles from "../styles/CreateProfile.module.css";
+import Profile from "./addProfilePic";
 import CountrySelector from "./selectCountry";
 import PreviousProjects from "./previousProjects";
 import Skills from "./skills";
@@ -6,6 +7,7 @@ import Skills from "./skills";
 export function ProfileForm() {
   return (
     <section>
+      <Profile />
       <form
         className={styles.createProfileForm}
         name="create-profile-form"
