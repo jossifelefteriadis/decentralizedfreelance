@@ -25,6 +25,7 @@ git checkout main
 git pull
 git checkout 'branch-name'
 git merge main
+git push
 ```
 
 ### 4. Deployment to prod
