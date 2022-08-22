@@ -12,7 +12,6 @@ contract Freelance {
     mapping(address => Profile) public profiles;
     address[] public allAddresses;
 
-    // Add new profile
     function addProfile(string memory _fName, string memory _lName, string memory _country, string memory _bio) public {
         Profile memory profile = Profile(_fName, _lName, _country, _bio);
         profiles[msg.sender] = profile;
