@@ -18,7 +18,16 @@ git commit -m "your-comment-here"
 git push
 ```
 
-### 3. Deployment to prod
+### 3. Merge main into branch
+
+```
+git checkout main
+git pull
+git checkout 'branch-name'
+git merge main
+```
+
+### 4. Deployment to prod
 
 ```
 Go to github repository
