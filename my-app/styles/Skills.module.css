@@ -1,0 +1,29 @@
+.skillsContainer {
+  margin-top: 3rem;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -0.8rem;
+  padding: 3rem 0;
+  border: 0.5px solid #9b9b9b;
+  border-radius: 7px;
+  /* width: 50vw; */
+}
+
+.addSkill {
+  width: 10rem;
+  height: 2.7rem;
+  font-size: 1rem;
+  background-color: #000000;
+  border: 2px solid #1b202b;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addSkill:hover {
+  background-color: #1b202b;
+}

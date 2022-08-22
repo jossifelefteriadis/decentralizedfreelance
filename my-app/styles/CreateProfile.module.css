@@ -1,0 +1,73 @@
+.createProfileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: #1d3987; */
+  /* margin: 5rem auto; */
+  padding: 3rem 0;
+  /* border: 0.5px solid #9b9b9b;
+  border-radius: 7px; */
+  /* width: 50vw; */
+}
+
+.createProfileForm {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 40vw;
+}
+
+.createProfileName {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.createProfileName section {
+  display: flex;
+  flex-direction: column;
+}
+
+.fname,
+.lname {
+  width: 15rem;
+  height: 2.5rem;
+  background-color: #000000;
+  outline: none;
+  border: 0.5px solid #9b9b9b;
+}
+
+.countries,
+.bio,
+.skills {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #000000;
+  outline: none;
+  border: 0.5px solid #9b9b9b;
+}
+
+.countries {
+  color: #1b202b;
+  border: none;
+}
+
+.label {
+  margin: 0.8rem 0 0.2rem;
+}
+
+.form_btn {
+  width: 100%;
+  height: 3rem;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  background-color: #1d3987;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form_btn:hover {
+  background-color: #162c68;
+}
