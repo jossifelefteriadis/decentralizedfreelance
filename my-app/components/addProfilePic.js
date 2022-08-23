@@ -31,6 +31,7 @@ export default function AddProfilePic() {
         console.log(error.message);
       });
   };
+
   return (
     <section className={styles.submitImageContainer}>
       <section className={styles.submitImage}>

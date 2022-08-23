@@ -1,10 +1,56 @@
+import React, { useState, useMemo } from "react";
+
+import Select from "react-select";
+import countryList from "react-select-country-list";
+
+import { useContract, useProvider, useSigner } from "wagmi";
 import styles from "../styles/CreateProfile.module.css";
+import { abi, DF_CONTRACT_ADDRESS } from "../constants";
 import Profile from "./addProfilePic";
 import CountrySelector from "./selectCountry";
 import PreviousProjects from "./previousProjects";
 import Skills from "./skills";
 
 export function ProfileForm() {
+  const [value, setValue] = useState("");
+  const options = useMemo(() => countryList().getData(), []);
+
+  const changeHandler = (value) => {
+    setValue(value);
+  };
+  // const { isConnected } = useAccount();
+  const provider = useProvider();
+  const { data: signer } = useSigner();
+  const [country, setCountry] = useState(false);
+  // const [loading, setLoading] = useState(false);
+
+  const freelanceContract = useContract({
+    addressOrName: DF_CONTRACT_ADDRESS,
+    contractInterface: abi,
+    signerOrProvider: signer || provider,
+  });
+
+  const handleSubmit = async () => {
+    // setCountry[country];
+    const fname = document.querySelector("#fname").value;
+    const lname = document.querySelector("#lname").value;
+    const country = value.label;
+    const bio = document.querySelector("#bio").value;
+    try {
+      console.log("fname", fname);
+      console.log("lname", lname);
+      console.log("country", country);
+      console.log("bio", bio);
+      console.log("hereeee");
+      const tx = await freelanceContract.addProfile(fname, lname, country, bio);
+
+      await tx.wait();
+      console.log("You successfully created a profile!");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <section>
       <Profile />
@@ -40,7 +86,7 @@ export function ProfileForm() {
             />
           </section>
         </section>
-        <label className={styles.label} htmlFor="country">
+        <label className={styles.label} id="country" htmlFor="country">
           Country
         </label>
         {/* <select
@@ -54,7 +100,13 @@ export function ProfileForm() {
           <option value="greece">Greece</option>
           <option value="norway">Norway</option>
         </select> */}
-        <CountrySelector />
+        {/* <CountrySelector setCountry={setCountry} /> */}
+        <Select
+          options={options}
+          value={value}
+          instanceId="long-value-select"
+          onChange={changeHandler}
+        />
         <label className={styles.label} htmlFor="bio">
           Your Bio
         </label>
@@ -78,7 +130,10 @@ export function ProfileForm() {
       </form>
       <PreviousProjects />
       <Skills />
-      <input type="submit" value="Save" className={styles.form_btn} />
+      <button className={styles.form_btn} onClick={handleSubmit}>
+        Save
+      </button>
+      {/* <input type="submit" value="Save" className={styles.form_btn} /> */}
     </section>
   );
 }

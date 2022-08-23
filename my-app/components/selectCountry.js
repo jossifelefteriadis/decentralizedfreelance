@@ -10,6 +10,7 @@ function CountrySelector() {
 
   const changeHandler = (value) => {
     setValue(value);
+    setCountry(value);
   };
 
   return (
@@ -18,6 +19,7 @@ function CountrySelector() {
         className={styles.countries}
         options={options}
         value={value}
+        instanceId="long-value-select"
         onChange={changeHandler}
       />
     </section>
