@@ -13,14 +13,22 @@ export default function Home() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   // const [svar, setSvar] = useState("nej");
 
-  if (!isConnected) {
-    useEffect(() => setIsLoggedIn(true), []);
-  } else {
-    // console.log("först nej", svar);
-    useEffect(() => setIsLoggedIn(false), []);
-    // setSvar("jaaa");
-    // console.log("borde va ja", svar);
-  }
+  useEffect(() => {
+    if (!isConnected) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  }, [isConnected]);
+
+  // if (!isConnected) {
+  //   useEffect(() => setIsLoggedIn(true), []);
+  // } else {
+  //   // console.log("först nej", svar);
+  //   useEffect(() => setIsLoggedIn(false), []);
+  //   // setSvar("jaaa");
+  //   // console.log("borde va ja", svar);
+  // }
   return (
     <section className={styles.container}>
       <Head>

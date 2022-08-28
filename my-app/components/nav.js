@@ -8,11 +8,19 @@ export default function Nav() {
   const { isConnected } = useAccount();
   const [isLoggedIn, logIn] = useState(false);
 
-  if (isConnected) {
-    useEffect(() => logIn(true), []);
-  } else {
-    useEffect(() => logIn(false), []);
-  }
+  useEffect(() => {
+    if (isConnected) {
+      logIn(true);
+    } else {
+      logIn(false);
+    }
+  }, [isConnected]);
+
+  // if (isConnected) {
+  //   useEffect(() => logIn(true), []);
+  // } else {
+  //   useEffect(() => logIn(false), []);
+  // }
   return (
     <div className={styles.navContainer}>
       <h1 className={styles.title}>df</h1>
