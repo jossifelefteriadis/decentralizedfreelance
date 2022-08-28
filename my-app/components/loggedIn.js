@@ -12,11 +12,11 @@ export default function LoggedIn() {
           </p>
           <section>
             <p>
-              - Make sure you are signed in with the correct wallet - it's where
-              the fund go
+              - Make sure you are signed in with the correct wallet - it&apos;s
+              where the fund go
             </p>
             <p>- Take your time and create a compelling profile</p>
-            <p>- Don't forget to add previous work</p>
+            <p>- Don&apos;t forget to add previous work</p>
             <p>
               - Make sure you always have 0.04 ether in your wallet - otherwise
               your account is inactive
@@ -35,8 +35,8 @@ export default function LoggedIn() {
           </p>
           <section>
             <p>
-              - Make sure you've done as much research as possible on what you
-              need help with
+              - Make sure you&apos;ve done as much research as possible on what
+              you need help with
             </p>
             {/* <p>
             - Type down a description of the job you need help with - be as

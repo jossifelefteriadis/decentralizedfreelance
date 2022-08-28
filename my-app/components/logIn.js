@@ -81,7 +81,7 @@ export default function LogIn() {
   return (
     <section>
       <p>Logga in</p>
-      <form className={styles.form} onsubmit="sendSignInLinkToEmail()">
+      <form className={styles.form} onSubmit="sendSignInLinkToEmail()">
         <input
           className={styles.form_input}
           type="text"
