@@ -7,7 +7,6 @@ import { useContract, useProvider, useSigner } from "wagmi";
 import styles from "../styles/CreateProfile.module.css";
 import { abi, DF_CONTRACT_ADDRESS } from "../constants";
 import Profile from "./addProfilePic";
-import CountrySelector from "./selectCountry";
 import PreviousProjects from "./previousProjects";
 import Skills from "./skills";
 
@@ -18,11 +17,9 @@ export function ProfileForm() {
   const changeHandler = (value) => {
     setValue(value);
   };
-  // const { isConnected } = useAccount();
   const provider = useProvider();
   const { data: signer } = useSigner();
   const [country, setCountry] = useState(false);
-  // const [loading, setLoading] = useState(false);
 
   const freelanceContract = useContract({
     addressOrName: DF_CONTRACT_ADDRESS,
@@ -31,7 +28,6 @@ export function ProfileForm() {
   });
 
   const handleSubmit = async () => {
-    // setCountry[country];
     const fname = document.querySelector("#fname").value;
     const lname = document.querySelector("#lname").value;
     const country = value.label;
@@ -89,18 +85,6 @@ export function ProfileForm() {
         <label className={styles.label} id="country" htmlFor="country">
           Country
         </label>
-        {/* <select
-          className={styles.gigForm__inputs}
-          id="country"
-          name="country"
-          style={{ width: 200, height: 35 }}
-          required
-        >
-          <option value="sweden">Sweden</option>
-          <option value="greece">Greece</option>
-          <option value="norway">Norway</option>
-        </select> */}
-        {/* <CountrySelector setCountry={setCountry} /> */}
         <Select
           className={styles.countries}
           options={options}
@@ -134,7 +118,6 @@ export function ProfileForm() {
       <button className={styles.form_btn} onClick={handleSubmit}>
         Save
       </button>
-      {/* <input type="submit" value="Save" className={styles.form_btn} /> */}
     </section>
   );
 }

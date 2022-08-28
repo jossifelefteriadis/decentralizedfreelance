@@ -11,7 +11,6 @@ import LoggedIn from "../components/loggedIn";
 export default function Home() {
   const { isConnected } = useAccount();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // const [svar, setSvar] = useState("nej");
 
   useEffect(() => {
     if (!isConnected) {
@@ -21,14 +20,6 @@ export default function Home() {
     }
   }, [isConnected]);
 
-  // if (!isConnected) {
-  //   useEffect(() => setIsLoggedIn(true), []);
-  // } else {
-  //   // console.log("först nej", svar);
-  //   useEffect(() => setIsLoggedIn(false), []);
-  //   // setSvar("jaaa");
-  //   // console.log("borde va ja", svar);
-  // }
   return (
     <section className={styles.container}>
       <Head>

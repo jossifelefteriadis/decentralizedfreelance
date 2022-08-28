@@ -16,11 +16,6 @@ export default function Nav() {
     }
   }, [isConnected]);
 
-  // if (isConnected) {
-  //   useEffect(() => logIn(true), []);
-  // } else {
-  //   useEffect(() => logIn(false), []);
-  // }
   return (
     <div className={styles.navContainer}>
       <h1 className={styles.title}>df</h1>

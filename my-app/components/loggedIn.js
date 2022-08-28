@@ -38,10 +38,6 @@ export default function LoggedIn() {
               - Make sure you&apos;ve done as much research as possible on what
               you need help with
             </p>
-            {/* <p>
-            - Type down a description of the job you need help with - be as
-            detailed as possible
-          </p> */}
             <p>
               - Type down a description of the job you need help with - be as
               detailed as possible
