@@ -102,6 +102,7 @@ export function ProfileForm() {
         </select> */}
         {/* <CountrySelector setCountry={setCountry} /> */}
         <Select
+          className={styles.countries}
           options={options}
           value={value}
           instanceId="long-value-select"
