@@ -9,9 +9,9 @@ export default function Nav() {
   const [isLoggedIn, logIn] = useState(false);
 
   if (isConnected) {
-    useEffect(() => logIn(true));
+    useEffect(() => logIn(true), []);
   } else {
-    useEffect(() => logIn(false));
+    useEffect(() => logIn(false), []);
   }
   return (
     <div className={styles.navContainer}>

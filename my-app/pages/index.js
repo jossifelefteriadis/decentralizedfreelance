@@ -10,12 +10,16 @@ import LoggedIn from "../components/loggedIn";
 
 export default function Home() {
   const { isConnected } = useAccount();
-  const [isLoggedIn, logIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [svar, setSvar] = useState("nej");
 
   if (!isConnected) {
-    useEffect(() => logIn(true));
+    useEffect(() => setIsLoggedIn(true), []);
   } else {
-    useEffect(() => logIn(false));
+    // console.log("först nej", svar);
+    useEffect(() => setIsLoggedIn(false), []);
+    // setSvar("jaaa");
+    // console.log("borde va ja", svar);
   }
   return (
     <section className={styles.container}>
