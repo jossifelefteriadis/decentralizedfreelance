@@ -11,6 +11,7 @@ h1.title {
   color: #0070f3;
   font-size: 3rem;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .navItems {

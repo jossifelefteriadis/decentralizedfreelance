@@ -18,11 +18,13 @@ export default function Nav() {
 
   return (
     <div className={styles.navContainer}>
-      <h1 className={styles.title}>df</h1>
+      <Link href="/">
+        <h1 className={styles.title}>df</h1>
+      </Link>
       {isLoggedIn && (
         <ul className={styles.navItems}>
-          <Link href="/createProfile">
-            <li>Create profile</li>
+          <Link href="/Profile">
+            <li>Profile</li>
           </Link>
           <li>
             <ConnectButton />
