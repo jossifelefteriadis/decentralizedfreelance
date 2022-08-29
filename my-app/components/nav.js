@@ -23,8 +23,11 @@ export default function Nav() {
       </Link>
       {isLoggedIn && (
         <ul className={styles.navItems}>
-          <Link href="/Profile">
+          <Link href="/profile">
             <li>Profile</li>
+          </Link>
+          <Link href="/allprofiles">
+            <li>Find Freelancer</li>
           </Link>
           <li>
             <ConnectButton />

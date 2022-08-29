@@ -19,8 +19,11 @@ h1.title {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 43%;
+  width: 48%;
   margin-right: 0.2em;
   list-style: none;
+}
+
+.navItems li {
   cursor: pointer;
 }

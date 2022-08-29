@@ -6,7 +6,7 @@ import countryList from "react-select-country-list";
 import { useContract, useProvider, useSigner } from "wagmi";
 import styles from "../styles/CreateProfile.module.css";
 import { abi, DF_CONTRACT_ADDRESS } from "../constants";
-import Profile from "./addProfilePic";
+import AddProfilePic from "./addProfilePic";
 import PreviousProjects from "./previousProjects";
 import Skills from "./skills";
 
@@ -49,7 +49,7 @@ export function ProfileForm() {
 
   return (
     <section>
-      <Profile />
+      <AddProfilePic />
       <form
         className={styles.createProfileForm}
         name="create-profile-form"
