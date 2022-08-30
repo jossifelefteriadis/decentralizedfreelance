@@ -39,10 +39,14 @@ export default function GetAllProfiles() {
             key={allProfiles.indexOf(profile)}
           >
             <p>
-              {profile.fName} {profile.lName}
+              <span>Name:</span> {profile.fName} {profile.lName}
             </p>
-            <p>{profile.country}</p>
-            <p>{profile.bio}</p>
+            <p>
+              <span>From:</span> {profile.country}
+            </p>
+            <p>
+              <span>Bio:</span> {profile.bio}
+            </p>
           </section>
         ))}
       </section>
