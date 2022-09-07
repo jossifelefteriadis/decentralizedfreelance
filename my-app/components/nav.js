@@ -23,7 +23,7 @@ export default function Nav() {
       </Link>
       {isLoggedIn && (
         <ul className={styles.navItems}>
-          <Link href="/Profile">
+          <Link href="/profile">
             <li>Profile</li>
           </Link>
           <li>
